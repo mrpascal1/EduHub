@@ -315,7 +315,7 @@
                                 <ImageView
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/kotlinicon2"
+                                    android:src="@drawable/kotlin_icon"
                                     android:padding="10dp"/>
 
                                 <TextView
