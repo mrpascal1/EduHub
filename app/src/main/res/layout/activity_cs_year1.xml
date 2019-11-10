@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionPapers.CsYear1Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CODCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Computer Org &amp; Design"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PYTHONCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Programming with Python- I"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/FOSSCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Free &amp; Open Source Software"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/DBMSCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Database Systems"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MATHSCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Discrete Mathematics"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/STATSCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Statistics &amp; Probability"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SSDCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Soft Skills Development"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cProg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Programming with C"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pyProg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Programming with Python– II "
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/linuxSem2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Linux"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dsSem2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Structures"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

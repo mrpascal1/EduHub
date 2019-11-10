@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinuxS2.LinuxIntro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                app:cardElevation="2dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/firstArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. What is linux ?"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/WILCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/WILTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/secondHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="4dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/secondArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. History of linux"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/HOLCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/HOLTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thirdHeader"
+                android:layout_width="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/thirdArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Philosophy"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PHILCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/PHILTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fourthHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/fourthArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4. Community"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CTYCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/CTYTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="HI I am Community"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fifthHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/fifthArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5. Terminology"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/TMLGYCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+                <LinearLayout
+                    android:id="@+id/TMLGYLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/TMLGYTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+                    <WebView
+                        android:id="@+id/TMLGYWebView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sixthHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/sixthArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6. Distribution"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/DISTROCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+                <LinearLayout
+                    android:id="@+id/DISTROLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/DISTROTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+                    <WebView
+                        android:id="@+id/DISTROWebView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/seventhHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/seventhArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7. kernel vs Distro "
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/KvDCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+                <LinearLayout
+                    android:id="@+id/KvDLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <WebView
+                        android:id="@+id/KvDWebView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/eightHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/eightArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8. Features of linux"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/FOLCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/FOLTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nineHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/nineArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9. Imp of linux"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/IMOLCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:id="@+id/IMOLLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+                    <WebView
+                        android:id="@+id/IMOLWebView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tenthHeader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/tenthArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10. Important Questions"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/IMQCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/IMQTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

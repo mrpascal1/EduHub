@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/year1"
+        android:title="First Year"/>
+
+    <item android:id="@+id/year2"
+        android:title="Second Year"/>
+
+    <item android:id="@+id/year3"
+        android:title="Third Year"/>
+
+</menu>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686352265467",
+    "firebase_url": "https://eduhub-e67be.firebaseio.com",
+    "project_id": "eduhub-e67be",
+    "storage_bucket": "eduhub-e67be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686352265467:android:a3d17286996f34042f005e",
+        "android_client_info": {
+          "package_name": "com.techelectron.eduhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686352265467-dku1rk2i5er36tfsr2tfvtmf5uhfg53d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQOYm6iVyYAqiRHk3FxfzUolSNjSxl1SE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686352265467-dku1rk2i5er36tfsr2tfvtmf5uhfg53d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
