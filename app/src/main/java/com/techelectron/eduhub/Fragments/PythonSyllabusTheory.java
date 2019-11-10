@@ -18,7 +18,6 @@ import com.techelectron.eduhub.AboutUsActivity;
 import com.techelectron.eduhub.Adapters.TopicAdapter;
 import com.techelectron.eduhub.Models.ModelTopic;
 import com.techelectron.eduhub.R;
-import com.techelectron.eduhub.SyllabusActivity;
 
 import java.util.ArrayList;
 

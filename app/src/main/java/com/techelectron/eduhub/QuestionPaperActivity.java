@@ -6,16 +6,8 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.PopupMenu;
-
-import com.techelectron.eduhub.QuestionPapers.CsYear1Activity;
-import com.techelectron.eduhub.QuestionPapers.CsYear2Activity;
 import com.techelectron.eduhub.QuestionPapers.CsYear3Activity;
-import com.techelectron.eduhub.QuestionPapers.InfoTechYear1Activity;
-import com.techelectron.eduhub.QuestionPapers.InfoTechYear2Activity;
 import com.techelectron.eduhub.QuestionPapers.InfoTechYear3Activity;
 
 public class QuestionPaperActivity extends AppCompatActivity {

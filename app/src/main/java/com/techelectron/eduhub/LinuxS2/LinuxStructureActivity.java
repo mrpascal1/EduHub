@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,8 +30,6 @@ public class LinuxStructureActivity extends AppCompatActivity {
     LinearLayout LARCHLayout, KERNELLayout, SHELLLayout, FSLayout, BPLayout, INITSLayout, RUNLLayout, SPLayout, PMLayout;
 
     WebView LARCHWebView, KERNELWebView, SHELLWebView, FSWebView, BPWebView, INITSWebView, RUNLWebView, SPWebView, PMWebView;
-/*    WebSettings LARCHWebSettings, KERNELWebSettings, SHELLWebSettings, FSWebSettings,
-            BPWebSettings, INITSWebSettings, RUNLWebSettings, SPWebSettings, PMWebSettings;*/
 
     DatabaseReference databaseReference;
     public static final String MIME = "text/html";
