@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,15 +8,187 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Coming Soon"
-        android:textColor="@color/md_black_1000"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SPMCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="SPM"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/IOTCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="IOT"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ITAICard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Artificial Intelligence"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/AWPCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Advance Web Programming"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ITLSACard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Linux System Admin"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/EJCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Enterprise Java"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/NGTCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Next Generation Tech"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
     </RelativeLayout>
-</RelativeLayout>
+
+</ScrollView>
