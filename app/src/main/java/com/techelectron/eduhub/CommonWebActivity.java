@@ -25,12 +25,12 @@ public class CommonWebActivity extends AppCompatActivity {
             "https://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/LSA/TYBSC-CS_SEM5_LSA_APR19.pdf";
 
     public static final String nov2018STQA = "http://docs.google.com/gview?embedded=true&url=" +
-            "http://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/STQA/TYBSC-CS_SEM5_STQA_NOV18.pdf";
+            "https://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/STQA/TYBSC-CS_SEM5_STQA_NOV18.pdf";
     public static final String april2019STQA = "http://docs.google.com/gview?embedded=true&url=" +
             "https://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/STQA/TYBSC-CS_SEM5_STQA_APR19.pdf";
 
     public static final String nov2018INS = "http://docs.google.com/gview?embedded=true&url=" +
-            "http://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/INS/TYBSC-CS_SEM5_INS_NOV18.pdf";
+            "https://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/INS/TYBSC-CS_SEM5_INS_NOV18.pdf";
     public static final String april2019INS = "http://docs.google.com/gview?embedded=true&url=" +
             "https://muquestionpapers.com/download/BSC/CS/SEM5%20CBCS/INS/TYBSC-CS_SEM5_INS_APR19.pdf";
 
