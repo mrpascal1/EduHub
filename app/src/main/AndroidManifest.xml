@@ -28,7 +28,10 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8804672563856107~3575754488" /> <!-- Actual ca-app-pub-8804672563856107~3575754488 -->
+            android:value="ca-app-pub-8804672563856107~3575754488" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" /> <!-- Actual ca-app-pub-8804672563856107~3575754488 -->
         <activity android:name=".CommonWebActivity" />
         <activity android:name=".QuestionPapers.CsYear3Activity" />
         <activity android:name=".QuestionPapers.CsYear2Activity" />
