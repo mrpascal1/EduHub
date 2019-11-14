@@ -36,7 +36,7 @@ public class AboutUsActivity extends AppCompatActivity {
         facebookLayout = findViewById(R.id.facebookLayout);
 
         instaUri = Uri.parse("http://instagram.com/_u/_eduhub_");
-        twitterUri = Uri.parse("http://instagram.com/_u/_eduhub_");
+        twitterUri = Uri.parse("http://twitter.com/techelectron5");
         linkedInUri = Uri.parse("http://linkedin.com/company/techelectron");
         facebookUri = Uri.parse("http://facebook.com/techelectron-102477581190208");
 
@@ -58,12 +58,18 @@ public class AboutUsActivity extends AppCompatActivity {
             }
         });
 
-        /*twitterLayout.setOnClickListener(new View.OnClickListener() {
+        twitterLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW, twitterUri);
+                intent.setPackage("com.twitter.android");
+                try{
+                    startActivity(intent);
+                }catch (ActivityNotFoundException e){
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://twitter.com/techelectron5")));
+                }
             }
-        });*/
+        });
 
         linkedInLayout.setOnClickListener(new View.OnClickListener() {
             @Override
