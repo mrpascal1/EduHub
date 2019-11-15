@@ -27,6 +27,7 @@ public class InfoTechYear3Activity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("IT year 3");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         SPMCard = findViewById(R.id.SPMCard);
@@ -110,5 +111,11 @@ public class InfoTechYear3Activity extends AppCompatActivity {
         });
 
         popup.show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

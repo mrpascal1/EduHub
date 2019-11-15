@@ -21,6 +21,7 @@ public class CsSemFour extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("CS Sem 4");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         foa = findViewById(R.id.foa);
@@ -35,5 +36,11 @@ public class CsSemFour extends AppCompatActivity {
                 Toast.makeText(CsSemFour.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

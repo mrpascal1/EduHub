@@ -24,6 +24,7 @@ public class GreenTechTheoryActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Green Tech");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         chapter1 = findViewById(R.id.chapter1);
@@ -75,5 +76,11 @@ public class GreenTechTheoryActivity extends AppCompatActivity {
                 Toast.makeText(GreenTechTheoryActivity.this, "Coming soon", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

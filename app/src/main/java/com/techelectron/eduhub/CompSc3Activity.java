@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class CompSc3Activity extends AppCompatActivity {
 
@@ -19,9 +21,30 @@ public class CompSc3Activity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("3rd Year");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         fifthSem = findViewById(R.id.fifthSem);
         sixthSem = findViewById(R.id.sixthSem);
+
+        fifthSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompSc3Activity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        sixthSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompSc3Activity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.1.0" versioncode="3" >
+        <change>New: Bsc IT question papers added</change>
+        <change>About section improved</change>
+    </release>
+    <release version="1.0.1" versioncode="2" >
+        <change>Fixed: outOfMemory bug</change>
+    </release>
+    <release version="1.0" versioncode="1">
+        <change>Initial release</change>
+    </release>
+</changelog>

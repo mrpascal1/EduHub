@@ -3,6 +3,13 @@
     <string name="Open">Open</string>
     <string name="Close">Close</string>
 
+
+    <string name="changelog_full_title">Changelog</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">More…</string>
+
+    <string name="aboutUsText">"Eduhub provides a unique way to learn and understand the topic that you might have missed in the class or didn't understand properly. Eduhub Helps you to understand concepts better.\n\nEduHub is based on the concept of providing better and simple content to the students with a perfect UI design.\n\nIt contains multiple programming languages, and we also provide the syllabus of Mumbai University of Multiple streams, previous year question papers.\nLearn more than just the Syllabus, Eduhub provide a wide variety of topics to learn from apart from the syllabus\nGet In-depth and easy learning of important topics for Exams also this application is not only for students anyone who wants to learn programming can join us.\n\nOur vision is to make every student learn and make the world a better place.\n\nSend us what you would like to see in next updates at feedback.eduhub@techelectron.com\n\nContact Us\nFor enquires\ncontact.eduhub@techelectron.com\n\nDeveloped &amp; Designed By :\nTechElectron\nwww.techelectron.com\ninfo@techelectron.com"</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

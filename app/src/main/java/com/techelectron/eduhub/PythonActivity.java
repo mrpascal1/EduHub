@@ -30,6 +30,7 @@ public class PythonActivity extends AppCompatActivity {
             actionBar.setTitle("Python");
             actionBar.setElevation(0);
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         tabLayout = findViewById(R.id.tabview);
@@ -80,6 +81,12 @@ public class PythonActivity extends AppCompatActivity {
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }
 

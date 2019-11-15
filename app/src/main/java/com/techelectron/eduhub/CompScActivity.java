@@ -28,6 +28,7 @@ public class CompScActivity extends AppCompatActivity {
             actionBar.setTitle("Computer Science");
             actionBar.setElevation(0);
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
         firstSem = findViewById(R.id.firstSem);
         secondSem = findViewById(R.id.secondSem);
@@ -48,5 +49,11 @@ public class CompScActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

@@ -58,6 +58,7 @@ public class LinuxIntro extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("Linux");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Theory").child("LinuxS2");
@@ -475,5 +476,11 @@ public class LinuxIntro extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

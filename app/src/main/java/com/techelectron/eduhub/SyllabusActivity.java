@@ -32,6 +32,7 @@ public class SyllabusActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Syllabus");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -133,5 +134,11 @@ public class SyllabusActivity extends AppCompatActivity {
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

@@ -49,6 +49,7 @@ public class LinuxCommandLineActivity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("Linux");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Theory").child("LinuxS2").child("Command Line");
@@ -345,5 +346,11 @@ public class LinuxCommandLineActivity extends AppCompatActivity {
         }else {
             webView.loadDataWithBaseURL(null, topic, MIME, ENCODING, null);
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

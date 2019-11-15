@@ -25,6 +25,7 @@ public class LinuxSem2Activity extends AppCompatActivity {
             actionBar.setTitle("Linux");
             actionBar.setElevation(0);
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         tabLayout = findViewById(R.id.tabview);
@@ -56,5 +57,11 @@ public class LinuxSem2Activity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

@@ -27,6 +27,7 @@ public class CsYear3Activity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("CS year 3");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         AICard = findViewById(R.id.AICard);
@@ -127,5 +128,11 @@ public class CsYear3Activity extends AppCompatActivity {
         });
 
         popup.show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

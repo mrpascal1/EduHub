@@ -49,6 +49,7 @@ public class LinuxSecurityActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Linux");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Theory").child("LinuxS2").child("Security");
@@ -324,5 +325,11 @@ public class LinuxSecurityActivity extends AppCompatActivity {
 
     public void initWebView(WebView webView){
         webView.getSettings().setJavaScriptEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

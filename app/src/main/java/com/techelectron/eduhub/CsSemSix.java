@@ -21,6 +21,7 @@ public class CsSemSix extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("CS Sem 6");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         WSNCard = findViewById(R.id.WSNCard);
@@ -79,5 +80,11 @@ public class CsSemSix extends AppCompatActivity {
                 Toast.makeText(CsSemSix.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

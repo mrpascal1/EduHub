@@ -23,6 +23,7 @@ public class CompSc2Activity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("CS year 2");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         thirdSem = findViewById(R.id.thirdSem);
@@ -42,5 +43,11 @@ public class CompSc2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

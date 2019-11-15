@@ -24,6 +24,7 @@ public class CsSemTwo extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("CS Sem 2");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         cProg = findViewById(R.id.cProg);
@@ -69,5 +70,11 @@ public class CsSemTwo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

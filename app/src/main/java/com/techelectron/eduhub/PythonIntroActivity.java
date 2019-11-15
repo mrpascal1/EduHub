@@ -43,6 +43,7 @@ public class PythonIntroActivity extends AppCompatActivity {
             actionBar.setTitle("Python");
             //actionBar.setElevation(0);
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
         justHeader = findViewById(R.id.justHeader);
         introHeader = findViewById(R.id.introHeader);
@@ -124,5 +125,11 @@ public class PythonIntroActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

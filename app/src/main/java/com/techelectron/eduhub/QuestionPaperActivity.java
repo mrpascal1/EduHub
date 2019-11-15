@@ -23,6 +23,7 @@ public class QuestionPaperActivity extends AppCompatActivity {
         if (actionBar != null){
             actionBar.setTitle("Question Papers");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         bscCS = findViewById(R.id.bscCS);
@@ -44,7 +45,14 @@ public class QuestionPaperActivity extends AppCompatActivity {
             }
         });
     }
-/*
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    /*
     public void csPopup() {
         PopupMenu popup = new PopupMenu(this, bscCS);
         MenuInflater inflater = popup.getMenuInflater();

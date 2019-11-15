@@ -49,6 +49,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Overview");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Theory").child("Green Tech").child("GreenIT Overview");
@@ -427,5 +428,11 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         }else {
             webView.loadDataWithBaseURL(null, topic, MIME, ENCODING, null);
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }
