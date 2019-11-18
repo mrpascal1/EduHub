@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release version="1.1.0" versioncode="3" >
-        <change>New: Bsc IT question papers added</change>
+        <change>New: Bsc IT question papers</change>
+        <change>New: Loading screen for question papers</change>
         <change>About section improved</change>
+        <change>Now you can share our application with your friends</change>
     </release>
     <release version="1.0.1" versioncode="2" >
         <change>Fixed: outOfMemory bug</change>
