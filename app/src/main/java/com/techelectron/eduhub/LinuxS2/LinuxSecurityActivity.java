@@ -47,7 +47,7 @@ public class LinuxSecurityActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("Linux");
+            actionBar.setTitle("Security");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }

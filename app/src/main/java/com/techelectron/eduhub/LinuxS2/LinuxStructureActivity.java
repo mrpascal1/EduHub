@@ -45,7 +45,7 @@ public class LinuxStructureActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
-            actionBar.setTitle("Linux");
+            actionBar.setTitle("Linux Structure");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }

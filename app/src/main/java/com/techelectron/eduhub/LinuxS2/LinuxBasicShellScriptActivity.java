@@ -46,7 +46,7 @@ public class LinuxBasicShellScriptActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
-            actionBar.setTitle("Linux");
+            actionBar.setTitle("Basic Shell Scripting");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }

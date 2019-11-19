@@ -6,62 +6,163 @@
     android:layout_height="match_parent"
     tools:context=".InfoTechActivity">
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:clipToPadding="false"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/firstSem"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="10dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_margin="10dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-            <TextView
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstSem"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="First Sem"
-                android:textSize="22sp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/md_white_1000"
-                android:layout_gravity="center"
-                android:background="@drawable/bglist"/>
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
 
-        </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="First Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/secondSem"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="10dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_margin="10dp">
+            </androidx.cardview.widget.CardView>
 
-            <TextView
+            <androidx.cardview.widget.CardView
+                android:id="@+id/secondSem"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Second Sem"
-                android:textSize="22sp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/md_white_1000"
-                android:layout_gravity="center"
-                android:background="@drawable/bglist"/>
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
 
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Second Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thirdSem"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Third Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fourthSem"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fourth Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fifthSem"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fifth Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sixthSem"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sixth Sem"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

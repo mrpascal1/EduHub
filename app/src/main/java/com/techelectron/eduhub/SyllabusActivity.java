@@ -5,7 +5,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.PopupMenu;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,73 +49,19 @@ public class SyllabusActivity extends AppCompatActivity {
         bscCS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                csPopup();
+                Intent intent = new Intent(SyllabusActivity.this, CompScActivity.class);
+                startActivity(intent);
             }
         });
 
         bscIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(SyllabusActivity.this, InfoTechActivity.class);
-                //startActivity(intent);
-                itPopup();
+                Intent intent = new Intent(SyllabusActivity.this, InfoTechActivity.class);
+                startActivity(intent);
             }
         });
     }
-
-    public void csPopup() {
-        PopupMenu popup = new PopupMenu(this, bscCS);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.year_menu, popup.getMenu());
-
-        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.year1) {
-                    Intent intent = new Intent(SyllabusActivity.this, CompScActivity.class);
-                    startActivity(intent);
-                }else if (id == R.id.year2){
-                    Intent intent = new Intent(SyllabusActivity.this, CompSc2Activity.class);
-                    startActivity(intent);
-                }else if (id == R.id.year3){
-                    Intent intent = new Intent(SyllabusActivity.this, CompSc3Activity.class);
-                    startActivity(intent);
-                }
-                return true;
-            }
-        });
-
-        popup.show();
-    }
-
-    public void itPopup() {
-        PopupMenu popup = new PopupMenu(this, bscIT);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.year_menu, popup.getMenu());
-
-        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.year1) {
-                    Intent intent = new Intent(SyllabusActivity.this, InfoTechActivity.class);
-                    startActivity(intent);
-                }else if (id == R.id.year2){
-                    Intent intent = new Intent(SyllabusActivity.this, InfoTech2Activity.class);
-                    startActivity(intent);
-                }else if (id == R.id.year3){
-                    Intent intent = new Intent(SyllabusActivity.this, InfoTech3Activity.class);
-                    startActivity(intent);
-                }
-                return true;
-            }
-        });
-
-        popup.show();
-    }
-
 
 
     @Override

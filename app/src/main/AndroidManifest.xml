@@ -43,10 +43,6 @@
         <activity android:name=".LinuxS2.LinuxIntro" />
         <activity android:name=".LinuxSem2Activity" />
         <activity android:name=".CsSemFour" />
-        <activity android:name=".InfoTech3Activity" />
-        <activity android:name=".InfoTech2Activity" />
-        <activity android:name=".CompSc3Activity" />
-        <activity android:name=".CompSc2Activity" />
         <activity android:name=".CsSemTwo" />
         <activity android:name=".InfoTechActivity" />
         <activity android:name=".CompScActivity" />

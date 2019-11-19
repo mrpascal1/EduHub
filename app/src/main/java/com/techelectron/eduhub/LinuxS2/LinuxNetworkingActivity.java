@@ -48,7 +48,7 @@ public class LinuxNetworkingActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
-            actionBar.setTitle("Linux");
+            actionBar.setTitle("Networking");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }

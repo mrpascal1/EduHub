@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -16,7 +17,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class CompScActivity extends AppCompatActivity {
 
-    CardView firstSem, secondSem;
+    CardView firstSem, secondSem, thirdSem, fourthSem, fifthSem, sixthSem;
     private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,13 @@ public class CompScActivity extends AppCompatActivity {
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
         firstSem = findViewById(R.id.firstSem);
         secondSem = findViewById(R.id.secondSem);
+        thirdSem = findViewById(R.id.thirdSem);
+        fourthSem = findViewById(R.id.fourthSem);
+        fifthSem = findViewById(R.id.fifthSem);
+        sixthSem = findViewById(R.id.sixthSem);
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -42,11 +48,47 @@ public class CompScActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        firstSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompScActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         secondSem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CompScActivity.this, CsSemTwo.class);
                 startActivity(intent);
+            }
+        });
+
+        thirdSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompScActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        fourthSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CompScActivity.this, CsSemFour.class);
+                startActivity(intent);
+            }
+        });
+
+        fifthSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompScActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        sixthSem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CompScActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
     }

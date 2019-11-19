@@ -56,7 +56,7 @@ public class LinuxIntro extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
-            actionBar.setTitle("Linux");
+            actionBar.setTitle("Introduction");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
