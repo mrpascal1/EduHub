@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.techelectron.eduhub.Models.ModelTopic;
-import com.techelectron.eduhub.PythonIntroActivity;
+import com.techelectron.eduhub.PythonS2.PythonIntroActivity;
 import com.techelectron.eduhub.R;
 
 import java.util.List;

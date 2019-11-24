@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CourseFragments.PythonCourseTheory">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/introPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Introduction"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/overviewPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Overview"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/envSetupPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Environment Setup"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/basicStxPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Basic Syntax"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/varTypesPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Variable Types"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/basicOpsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Basic Operators"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dcnMakingPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Decision Making"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loopsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Loops"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/numbersPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Numbers"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stringsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Strings"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Lists"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tuplesPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tuples"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dictPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Dictionary"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dateTimePythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Date &amp; Time"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/funcPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Functions"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/modsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Modules"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filesPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Files I/O"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exceptionsPythonC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Exceptions"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

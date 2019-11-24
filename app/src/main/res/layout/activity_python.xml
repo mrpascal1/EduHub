@@ -5,12 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".PythonActivity">
-
-    <!--<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pythonRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />-->
+    tools:context=".PythonSem2Activity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabview"

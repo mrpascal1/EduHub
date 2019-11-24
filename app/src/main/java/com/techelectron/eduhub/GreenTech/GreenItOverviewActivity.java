@@ -23,14 +23,14 @@ import java.util.Objects;
 
 public class GreenItOverviewActivity extends AppCompatActivity {
 
-    CardView firstHeader, secondHeader, thirdHeader, fourthHeader, fifthHeader, sixthHeader, seventhHeader, eightHeader;
-    TextView firstArrow, secondArrow, thirdArrow, fourthArrow, fifthArrow, sixthArrow, seventhArrow, eightArrow;
+    CardView firstHeader, secondHeader, thirdHeader, fourthHeader, fifthHeader, sixthHeader, seventhHeader, eightHeader, nineHeader;
+    TextView firstArrow, secondArrow, thirdArrow, fourthArrow, fifthArrow, sixthArrow, seventhArrow, eightArrow, nineArrow;
 
-    CardView INTROCard, ECSDCard, EIITCard, GRNINGITCard, RSOITCard, ENVSTBCard, STDECOCard, ESTCard;
+    CardView INTROCard, ECSDCard, EIITCard, GRNINGITCard, RSOITCard, ENVSTBCard, STDECOCard, ESTCard, GWCard;
 
-    LinearLayout INTROLayout, ECSDLayout, EIITLayout, GRNINGITLayout, RSOITLayout, ENVSTBLayout, STDECOLayout, ESTLayout;
+    LinearLayout INTROLayout, ECSDLayout, EIITLayout, GRNINGITLayout, RSOITLayout, ENVSTBLayout, STDECOLayout, ESTLayout, GWLayout;
 
-    WebView INTROWebView, ECSDWebView, EIITWebView, GRNINGITWebView, RSOITWebView, ENVSTBWebView, STDECOWebView, ESTWebView;
+    WebView INTROWebView, ECSDWebView, EIITWebView, GRNINGITWebView, RSOITWebView, ENVSTBWebView, STDECOWebView, ESTWebView, GWWebView;
 
     DatabaseReference databaseReference;
 
@@ -62,6 +62,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         sixthHeader = findViewById(R.id.sixthHeader);
         seventhHeader = findViewById(R.id.seventhHeader);
         eightHeader = findViewById(R.id.eightHeader);
+        nineHeader = findViewById(R.id.nineHeader);
 
         firstArrow = findViewById(R.id.firstArrow);
         secondArrow = findViewById(R.id.secondArrow);
@@ -71,6 +72,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         sixthArrow = findViewById(R.id.sixthArrow);
         seventhArrow = findViewById(R.id.seventhArrow);
         eightArrow = findViewById(R.id.eightArrow);
+        nineArrow = findViewById(R.id.nineArrow);
 
         INTROCard = findViewById(R.id.INTROCard);
         ECSDCard = findViewById(R.id.ECSDCard);
@@ -80,6 +82,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         ENVSTBCard = findViewById(R.id.ENVSTBCard);
         STDECOCard = findViewById(R.id.STDECOCard);
         ESTCard = findViewById(R.id.ESTCard);
+        GWCard = findViewById(R.id.GWCard);
 
         INTROLayout = findViewById(R.id.INTROLayout);
         ECSDLayout = findViewById(R.id.ECSDLayout);
@@ -89,6 +92,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         ENVSTBLayout = findViewById(R.id.ENVSTBLayout);
         STDECOLayout = findViewById(R.id.STDECOLayout);
         ESTLayout = findViewById(R.id.ESTLayout);
+        GWLayout = findViewById(R.id.GWLayout);
 
         INTROWebView = findViewById(R.id.INTROWebView);
         ECSDWebView = findViewById(R.id.ECSDWebView);
@@ -98,6 +102,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         ENVSTBWebView = findViewById(R.id.ENVSTBWebView);
         STDECOWebView = findViewById(R.id.STDECOWebView);
         ESTWebView = findViewById(R.id.ESTWebView);
+        GWWebView = findViewById(R.id.GWWebView);
 
         initWebView(INTROWebView);
         initWebView(ECSDWebView);
@@ -107,6 +112,7 @@ public class GreenItOverviewActivity extends AppCompatActivity {
         initWebView(ENVSTBWebView);
         initWebView(STDECOWebView);
         initWebView(ESTWebView);
+        initWebView(GWWebView);
 
         firstHeader.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -265,6 +271,41 @@ public class GreenItOverviewActivity extends AppCompatActivity {
                     setVisibility(ESTLayout, GONE);
                     changeArrow(eightArrow, 0);
                 }
+            }
+        });
+
+        nineHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkVisibility(GWLayout)){
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            loadGW();
+                        }
+                    }).start();
+                    setVisibility(GWLayout, VISIBLE);
+                    animate(GWCard);
+                    changeArrow(nineArrow, 1);
+                }else {
+                    setVisibility(GWLayout, GONE);
+                    changeArrow(nineArrow, 0);
+                }
+            }
+        });
+    }
+
+    public void loadGW() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String GW = Objects.requireNonNull(dataSnapshot.child("Green Washing").getValue()).toString();
+                checkSetContent(GW, GWWebView);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

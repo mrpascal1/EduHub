@@ -8,12 +8,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:largeHeap="true"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".GreenTech.GreenTechCommonActivity"></activity>
+        <activity android:name=".PythonCourse.PythonCourseIntro" />
+        <activity android:name=".PythonCourse.PythonCourseActivity" />
+        <activity android:name=".AboutUsActivity" />
         <activity android:name=".CsSemSix" />
         <activity android:name=".LinuxS2.LinuxBasicShellScriptActivity" />
         <activity android:name=".LinuxS2.LinuxNetworkingActivity" />
@@ -47,8 +50,8 @@
         <activity android:name=".InfoTechActivity" />
         <activity android:name=".CompScActivity" />
         <activity android:name=".SyllabusActivity" />
-        <activity android:name=".PythonIntroActivity" />
-        <activity android:name=".PythonActivity" />
+        <activity android:name=".PythonS2.PythonIntroActivity" />
+        <activity android:name=".PythonSem2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

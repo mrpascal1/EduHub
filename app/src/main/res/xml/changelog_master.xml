@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.2.0" versioncode="4" >
+        <change>New: Python Language added</change>
+        <change>New: Green Technology Chapters</change>
+        <change>Improved: App Workflow</change>
+    </release>
     <release version="1.1.0" versioncode="3" >
         <change>New: Bsc IT question papers</change>
         <change>New: Loading screen for question papers</change>

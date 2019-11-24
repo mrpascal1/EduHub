@@ -43,7 +43,7 @@ public class CsSemTwo extends AppCompatActivity {
         pyProg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CsSemTwo.this, PythonActivity.class);
+                Intent intent = new Intent(CsSemTwo.this, PythonSem2Activity.class);
                 startActivity(intent);
             }
         });

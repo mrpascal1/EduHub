@@ -7,232 +7,232 @@
     tools:context=".Fragments.LinuxSyllabusTheory">
 
     <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter1"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Introduction"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Introduction"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter2"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Linux Structure"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Linux Structure"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter3"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Graphical Desktop"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Graphical Desktop"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter4"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Command Line"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Command Line"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter5"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Linux Documentation"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Linux Documentation"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter6"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="File Operations"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="File Operations"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter7"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Security"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Security"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter8"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter8"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Networking"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Networking"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chapter9"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_margin="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/chapter9"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_margin="10dp">
+                android:layout_height="match_parent"
+                android:text="Basic Shell Scripting"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/md_white_1000"
+                android:layout_gravity="center"
+                android:background="@drawable/bglist"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Basic Shell Scripting"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/md_white_1000"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bglist"/>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-        </LinearLayout>
-
-    </ScrollView>
+</ScrollView>
 
 </RelativeLayout>

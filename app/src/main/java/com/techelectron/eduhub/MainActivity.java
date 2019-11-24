@@ -22,6 +22,8 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.techelectron.eduhub.Adapters.ExpandListAdapter;
 import com.google.android.material.navigation.NavigationView;
+import com.techelectron.eduhub.PythonCourse.PythonCourseActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -133,19 +135,15 @@ public class MainActivity extends AppCompatActivity {
         pythonCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
+                Intent intent = new Intent(MainActivity.this, PythonCourseActivity.class);
                 startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
-                Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
         javaCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
                 Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
@@ -153,9 +151,6 @@ public class MainActivity extends AppCompatActivity {
         cprogCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
                 Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
@@ -163,9 +158,6 @@ public class MainActivity extends AppCompatActivity {
         cppCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
                 Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
@@ -173,9 +165,6 @@ public class MainActivity extends AppCompatActivity {
         kotlinCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
                 Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
@@ -183,9 +172,6 @@ public class MainActivity extends AppCompatActivity {
         rustCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(MainActivity.this, PythonActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);*/
                 Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
             }
         });
@@ -218,13 +204,6 @@ public class MainActivity extends AppCompatActivity {
         });
         popup.show();
     }
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -325,6 +304,9 @@ public class MainActivity extends AppCompatActivity {
                 }else if (listHeader.equals("Programming Languages")){
                     switch (listOption){
                         case "Python":
+                            Intent pythonCourse = new Intent(MainActivity.this, PythonCourseActivity.class);
+                            startActivity(pythonCourse);
+                            break;
                         case "Java":
                         case "C":
                         case "C++":
