@@ -16,7 +16,18 @@
         <activity android:name=".GreenTech.GreenTechCommonActivity"></activity>
         <activity android:name=".PythonCourse.PythonCourseIntro" />
         <activity android:name=".PythonCourse.PythonCourseActivity" />
-        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".AboutUsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="www.techelectron.com" />
+            </intent-filter>
+        </activity>
         <activity android:name=".CsSemSix" />
         <activity android:name=".LinuxS2.LinuxBasicShellScriptActivity" />
         <activity android:name=".LinuxS2.LinuxNetworkingActivity" />
@@ -35,7 +46,18 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" /> <!-- Actual ca-app-pub-8804672563856107~3575754488 -->
-        <activity android:name=".CommonWebActivity" />
+        <activity android:name=".CommonWebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="www.google.com" />
+            </intent-filter>
+        </activity>
         <activity android:name=".QuestionPapers.CsYear3Activity" />
         <activity android:name=".QuestionPapers.CsYear2Activity" />
         <activity android:name=".QuestionPapers.CsYear1Activity" />
