@@ -36,7 +36,8 @@ public class CsSemTwo extends AppCompatActivity {
         cProg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CsSemTwo.this, "Coming soon", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CsSemTwo.this, CProgSem2Activity.class);
+                startActivity(intent);
             }
         });
 

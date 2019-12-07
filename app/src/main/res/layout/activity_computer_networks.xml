@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GreenTech.GreenTechTheoryActivity">
+    tools:context=".CNS4.ComputerNetworksActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:orientation="vertical"
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/chapter1"
+                android:id="@+id/CNchapter1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="4dp"
@@ -28,7 +28,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chapter 1"
+                    android:text="Network Models"
                     android:textSize="22sp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -40,7 +40,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/chapter2"
+                android:id="@+id/CNchapter2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="4dp"
@@ -52,7 +52,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chapter 2"
+                    android:text="Physical &amp; Data-link Layer"
                     android:textSize="22sp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -64,7 +64,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/chapter3"
+                android:id="@+id/CNchapter3"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:cardElevation="4dp"
@@ -76,7 +76,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chapter 3"
+                    android:text="Network &amp; Transport Layer"
                     android:textSize="22sp"
                     android:textAlignment="center"
                     android:gravity="center"

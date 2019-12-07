@@ -12,4 +12,90 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add2NosPy"># Python3 program to add two numbers\n
+        num1 = 15\n
+        num2 = 12\n\n
+        # Adding two nos\n
+        sum = num1 + num2\n\n
+        # printing values\n
+        print(\"Sum of {0} and {1} is {2}\" .format(num1, num2, sum))\n
+    </string>
+
+    <string name="factOfNosPy"># Python 3 program to find\n\n
+        # factorial of given number\n
+        def factorial(n): \n
+            \t# single line to find factorial \n
+            \treturn 1 if (n==1 or n==0) else n * factorial(n - 1);  \n
+        # Driver Code \n
+        num = 5; \n
+        print(\"Factorial of\",num,\"is\",factorial(num))\n
+    </string>
+
+    <string name="hwPy">print(\"Hello World\")\n</string>
+
+    <string name="simpleInterestPy"># Python3 program to find simple interest
+        # for given principal amount, time and rate of interest.\n\n
+        P = 1\n
+        R = 1\n
+        T = 1\n\n
+        # Calculates simple interest\n
+        SI = (P * R * T) / 100\n\n
+        # Print the resultant value of SI\n
+        print("simple interest is", SI)\n
+    </string>
+
+    <string name="compoundInterestPy">
+        # Python3 program to find compound \n
+        # interest for given values. \n\n
+        def compound_interest(principle, rate, time):\n
+            \t# Calculates compound interest  \n
+            \tCI = principle * (pow((1 + rate / 100), time))\n
+            \tprint("Compound interest is", CI) \n\n
+        # Driver Code  \n
+        compound_interest(10000, 10.25, 5)\n
+    </string>
+
+    <string name="armstrongNoPy">
+        # Python program to determine whether the number is Armstrong number or not\n\n
+        # Function to calculate x raised to the power y\n
+        def power(x, y):\n
+            \tif y==0:\n
+                \t\treturn 1\n
+            \tif y%2==0:\n
+                \t\treturn power(x, y/2)*power(x, y/2)\n
+            \treturn x*power(x, y/2)*power(x, y/2)\n
+
+        # Function to calculate order of the number
+        def order(x):\n\n
+
+            # variable to store of the number
+            \tn = 0\n
+            \twhile (x!=0):\n
+                \t\tn = n+1\n
+                \t\tx = x/10\n
+            \treturn n
+\n
+        # Function to check whether the given number is
+        # Armstrong number or not
+        def isArmstrong (x):\n
+            \tn = order(x)\n
+            \ttemp = x\n
+            \tsum1 = 0\n
+            \twhile (temp!=0):\n
+                \t\tr = temp%10\n
+                \t\tsum1 = sum1 + power(r, n)\n
+                \t\ttemp = temp/10\n
+
+            # If condition satisfies\n
+            \treturn (sum1 == x)\n
+\n
+
+        # Driver Program\n
+        x = 153\n
+        print(isArmstrong(x))\n
+        x = 1253\n
+        print(isArmstrong(x))\n
+
+    </string>
 </resources>

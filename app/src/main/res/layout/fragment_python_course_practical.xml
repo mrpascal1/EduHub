@@ -1,14 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".CourseFragments.PythonCoursePractical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hwPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Hello World"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add2NosPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Addition of 2 Numbers"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/factOfNosPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Factorial of a number"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/simpleInterestPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Simple Interest"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/compoundInterestPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Compound Interest"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/armstrongNoPy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Armstrong Number"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bglist"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:textSize="17sp"
+                android:text="Note: More Programs will be added in next update"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

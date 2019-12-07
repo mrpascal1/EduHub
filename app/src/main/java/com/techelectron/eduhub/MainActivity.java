@@ -15,11 +15,6 @@ import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.techelectron.eduhub.Adapters.ExpandListAdapter;
 import com.google.android.material.navigation.NavigationView;
 import com.techelectron.eduhub.PythonCourse.PythonCourseActivity;
@@ -47,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     CardView syllabusCard, pythonCard, javaCard, cprogCard, cppCard, kotlinCard, rustCard, questionPaperCard;
 
     ImageButton menuBtn, navBtn;
-    private AdView mAdView;
 
 
     @Override
@@ -94,16 +88,6 @@ public class MainActivity extends AppCompatActivity {
         menuBtn = findViewById(R.id.menuBtn);
         navBtn = findViewById(R.id.navBtn);
         enableExpandableList();
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
 
         menuBtn.setOnClickListener(new View.OnClickListener() {
             @Override

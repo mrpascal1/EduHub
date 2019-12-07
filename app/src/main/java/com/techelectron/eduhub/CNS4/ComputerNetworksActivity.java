@@ -1,4 +1,4 @@
-package com.techelectron.eduhub.GreenTech;
+package com.techelectron.eduhub.CNS4;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,58 +7,56 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.techelectron.eduhub.PythonCourse.PythonCourseIntro;
+import com.techelectron.eduhub.GreenTech.GreenTechCommonActivity;
+import com.techelectron.eduhub.GreenTech.GreenTechTheoryActivity;
 import com.techelectron.eduhub.R;
 
-public class GreenTechTheoryActivity extends AppCompatActivity {
+public class ComputerNetworksActivity extends AppCompatActivity {
 
-    CardView chapter1, chapter2, chapter3;
+    CardView cnChapter1, cnChapter2, cnChapter3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_green_tech_theory);
+        setContentView(R.layout.activity_computer_networks);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("Green Tech");
+            actionBar.setTitle("Computer Networks");
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        chapter1 = findViewById(R.id.chapter1);
-        chapter2 = findViewById(R.id.chapter2);
-        chapter3 = findViewById(R.id.chapter3);
+        cnChapter1 = findViewById(R.id.CNchapter1);
+        cnChapter2 = findViewById(R.id.CNchapter2);
+        cnChapter3 = findViewById(R.id.CNchapter3);
 
-        chapter1.setOnClickListener(new View.OnClickListener() {
+        cnChapter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GreenTechTheoryActivity.this, GreenItOverviewActivity.class);
-                startActivity(intent);
+                setAndOpenContent("Network Models");
             }
         });
 
-        chapter2.setOnClickListener(new View.OnClickListener() {
+        cnChapter2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setAndOpenContent("Chapter 2");
+                setAndOpenContent("Physical and Data link layer");
             }
         });
 
-        chapter3.setOnClickListener(new View.OnClickListener() {
+        cnChapter3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setAndOpenContent("Chapter 3");
+                setAndOpenContent("Network and Transport layer");
             }
         });
-
     }
 
     public void setAndOpenContent(String topic){
-        Intent intent = new Intent(GreenTechTheoryActivity.this, GreenTechCommonActivity.class);
-        intent.putExtra("Green Tech", topic);
+        Intent intent = new Intent(ComputerNetworksActivity.this, ComputerNetworksCommonActivity.class);
+        intent.putExtra("Computer Networks", topic);
         startActivity(intent);
     }
 

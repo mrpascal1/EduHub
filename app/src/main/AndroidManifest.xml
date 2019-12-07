@@ -13,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GreenTech.GreenTechCommonActivity"></activity>
+        <activity android:name=".PythonCourse.PythonCoursePracticalDisplayActivity"></activity>
+        <activity android:name=".CProgS2.CProgS2CommonActivity" />
+        <activity android:name=".CProgSem2Activity" />
+        <activity android:name=".CNS4.ComputerNetworksCommonActivity" />
+        <activity android:name=".CNS4.ComputerNetworksActivity" />
+        <activity android:name=".GreenTech.GreenTechCommonActivity" />
         <activity android:name=".PythonCourse.PythonCourseIntro" />
         <activity android:name=".PythonCourse.PythonCourseActivity" />
         <activity android:name=".AboutUsActivity">
@@ -24,8 +29,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="www.techelectron.com" />
+                    android:host="www.techelectron.com"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity android:name=".CsSemSix" />
@@ -40,9 +45,7 @@
         <activity android:name=".LinuxS2.LinuxGraphicalDesktopActivity" />
         <activity android:name=".LinuxS2.LinuxStructureActivity" />
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8804672563856107~3575754488" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" /> <!-- Actual ca-app-pub-8804672563856107~3575754488 -->
@@ -54,8 +57,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="www.google.com" />
+                    android:host="www.google.com"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity android:name=".QuestionPapers.CsYear3Activity" />

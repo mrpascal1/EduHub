@@ -1,34 +1,28 @@
-package com.techelectron.eduhub.PythonCourse;
+package com.techelectron.eduhub;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 import com.google.android.material.tabs.TabLayout;
-import com.techelectron.eduhub.AboutUsActivity;
-import com.techelectron.eduhub.CoursePagers.PythonCoursePager;
-import com.techelectron.eduhub.PythonSem2Activity;
-import com.techelectron.eduhub.R;
+import com.techelectron.eduhub.SyllabusPagers.CProgS2Pager;
 
-public class PythonCourseActivity extends AppCompatActivity {
+public class CProgSem2Activity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    PythonCoursePager pythonCoursePager;
+    CProgS2Pager cProgS2Pager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_python_course);
+        setContentView(R.layout.activity_cprog_sem2);
 
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setTitle("Python");
+        if (actionBar != null){
+            actionBar.setTitle("C Programming");
             actionBar.setElevation(0);
             actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bgactionbar));
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -38,12 +32,12 @@ public class PythonCourseActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         tabLayout.addTab(tabLayout.newTab().setText("Theory"));
-        tabLayout.addTab(tabLayout.newTab().setText("Programs"));
+        tabLayout.addTab(tabLayout.newTab().setText("Practicals"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        pythonCoursePager = new PythonCoursePager(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(pythonCoursePager);
+        cProgS2Pager = new CProgS2Pager(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(cProgS2Pager);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -63,23 +57,6 @@ public class PythonCourseActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.aboutus){
-            Intent intent = new Intent(this, AboutUsActivity.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

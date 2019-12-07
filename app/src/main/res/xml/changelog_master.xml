@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.3.1" versioncode="8" >
+        <change>Bug fixes and Ads removed</change>
+    </release>
+    <release version="1.3.0" versioncode="7" >
+        <change>New: Python programs added</change>
+        <change>New: More Computer Science Sem 2 and Sem 4 subjects added</change>
+        <change>Improved: Green Technology subjects</change>
+    </release>
     <release version="1.2.1" versioncode="6" >
         <change>Minor Bug fixes and Improvements</change>
     </release>

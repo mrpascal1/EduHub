@@ -4,9 +4,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.techelectron.eduhub.CNS4.ComputerNetworksActivity;
 
 public class CsSemFour extends AppCompatActivity {
 
@@ -31,6 +34,35 @@ public class CsSemFour extends AppCompatActivity {
         androidDev = findViewById(R.id.androidDev);
 
         foa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CsSemFour.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        advJava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CsSemFour.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        compNetworks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CsSemFour.this, ComputerNetworksActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        dotNet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(CsSemFour.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        androidDev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(CsSemFour.this, "Coming Soon", Toast.LENGTH_SHORT).show();
