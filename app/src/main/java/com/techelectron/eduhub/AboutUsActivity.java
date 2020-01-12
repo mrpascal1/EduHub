@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class AboutUsActivity extends AppCompatActivity {
-
+    //Declaration
     Uri instaUri, twitterUri, linkedInUri, facebookUri;
 
     LinearLayout aboutLayout, instaLayout, twitterLayout, linkedInLayout, facebookLayout, shareLayout, aboutTv;
