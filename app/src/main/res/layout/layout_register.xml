@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor">
+
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="@string/register"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*All fields are mandatory"
+            android:textColor="@color/red"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/nameEt"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="Name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/mobileNoEt"
+                style="@style/modifiedEditText"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:hint="Mobile Number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/emailEt"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="@string/login_email_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/passwordEt"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_password_hint"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/registerBtn"
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:text="Register" />
+
+        <TextView
+            android:id="@+id/alreadyAccTv"
+            style="@style/parent"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#b06ab3"
+            android:text="@string/signup_login_hint"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

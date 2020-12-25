@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#293859" />
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back_24dp"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/doneBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:padding="6dp"
+                android:src="@drawable/ic_done_white" />
+
+            <!--<ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:src="@drawable/circleyellowfil" />-->
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/topbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <!--Top Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileIv"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/pp" />
+
+                    <ImageView
+                        android:id="@+id/editProfileIv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_add_circle_red" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/nameEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:maxLength="20"
+                            android:hint="Name"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <EditText
+                            android:id="@+id/positionEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:maxLength="25"
+                            android:hint="Position"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <EditText
+                            android:id="@+id/mobileNoEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:hint="Mobile No"
+                            android:maxLength="10"
+                            android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <EditText
+                            android:id="@+id/aboutMeEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:hint="About Me"
+                            android:maxLength="225"
+                            android:inputType="textMultiLine"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <EditText
+                            android:id="@+id/skillsEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:hint="Skills" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <EditText
+                            android:id="@+id/cityEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/modifiedEditText"
+                            android:hint="City"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

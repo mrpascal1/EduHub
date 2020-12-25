@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_100"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="EduHub"
+            android:fontFamily="@font/abeezee"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+        <ImageView
+            android:id="@+id/searchIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/titleLayout"
+        android:background="@color/md_grey_300"/>
+
+    <RelativeLayout
+        android:layout_below="@id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_search"
+            android:padding="12dp"
+            android:hint="Search by title"
+            android:drawableStart="@drawable/ic_search_black"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_below="@id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

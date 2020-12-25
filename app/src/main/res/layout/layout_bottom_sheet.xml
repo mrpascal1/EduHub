@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add Post"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/cancelIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_round_cancel_black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/postBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_light_blue_600"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="150dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/topicSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg2"
+                android:gravity="start"
+                android:hint="Select Topic"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14.5sp"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_divider_color="@color/md_grey_100"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@color/md_blue_grey_800"
+                app:spinner_popup_elevation="14dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                    android:id="@+id/topicNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLength="150"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="Topic Name"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/titleEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLength="150"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="Title"
+                    android:padding="12dp"/>
+
+                <EditText
+                    android:id="@+id/descriptionEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Write something full of knowledge"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_shape"
+                    android:padding="12dp"
+                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

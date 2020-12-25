@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techelectron.eduhub">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,77 +14,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PythonCourse.PythonCoursePracticalDisplayActivity"></activity>
-        <activity android:name=".CProgS2.CProgS2CommonActivity" />
-        <activity android:name=".CProgSem2Activity" />
-        <activity android:name=".CNS4.ComputerNetworksCommonActivity" />
-        <activity android:name=".CNS4.ComputerNetworksActivity" />
-        <activity android:name=".GreenTech.GreenTechCommonActivity" />
-        <activity android:name=".PythonCourse.PythonCourseIntro" />
-        <activity android:name=".PythonCourse.PythonCourseActivity" />
-        <activity android:name=".AboutUsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.techelectron.com"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".CsSemSix" />
-        <activity android:name=".LinuxS2.LinuxBasicShellScriptActivity" />
-        <activity android:name=".LinuxS2.LinuxNetworkingActivity" />
-        <activity android:name=".GreenTech.GreenItOverviewActivity" />
-        <activity android:name=".GreenTech.GreenTechTheoryActivity" />
-        <activity android:name=".LinuxS2.LinuxSecurityActivity" />
-        <activity android:name=".LinuxS2.LinuxFileOperationsActivity" />
-        <activity android:name=".LinuxS2.LinuxDocumentationActivity" />
-        <activity android:name=".LinuxS2.LinuxCommandLineActivity" />
-        <activity android:name=".LinuxS2.LinuxGraphicalDesktopActivity" />
-        <activity android:name=".LinuxS2.LinuxStructureActivity" />
-
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" /> <!-- Actual ca-app-pub-8804672563856107~3575754488 -->
-        <activity android:name=".CommonWebActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.google.com"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".QuestionPapers.CsYear3Activity" />
-        <activity android:name=".QuestionPapers.CsYear2Activity" />
-        <activity android:name=".QuestionPapers.CsYear1Activity" />
-        <activity android:name=".QuestionPapers.InfoTechYear3Activity" />
-        <activity android:name=".QuestionPapers.InfoTechYear2Activity" />
-        <activity android:name=".QuestionPapers.InfoTechYear1Activity" />
-        <activity android:name=".QuestionPaperActivity" />
-        <activity android:name=".LinuxS2.LinuxIntro" />
-        <activity android:name=".LinuxSem2Activity" />
-        <activity android:name=".CsSemFour" />
-        <activity android:name=".CsSemTwo" />
-        <activity android:name=".InfoTechActivity" />
-        <activity android:name=".CompScActivity" />
-        <activity android:name=".SyllabusActivity" />
-        <activity android:name=".PythonS2.PythonIntroActivity" />
-        <activity android:name=".PythonSem2Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AddPostActivity"></activity>
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
 </manifest>
