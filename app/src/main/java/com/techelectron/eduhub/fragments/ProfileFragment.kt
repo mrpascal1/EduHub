@@ -4,8 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.techelectron.eduhub.EditProfileActivity
@@ -21,6 +25,7 @@ class ProfileFragment : Fragment() {
     lateinit var firebaseDatabase: FirebaseDatabase
     lateinit var query: Query
     lateinit var uid: String
+    private var googleSignInClient: GoogleSignInClient? = null
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +41,12 @@ class ProfileFragment : Fragment() {
         query = databaseReference.orderByChild("email").equalTo(user?.email)
 
         checkUserStatus()
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail().build()
+        googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
+        //var acct = GoogleSignIn.getLastSignedInAccount(requireContext())
 
         return view
     }
@@ -118,9 +129,16 @@ class ProfileFragment : Fragment() {
                 startActivity(intent)
             }else if(it.itemId == R.id.signOut){
                 firebaseAuth.signOut()
-                val intent = Intent(requireContext(), LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
+                googleSignInClient?.signOut()?.addOnCompleteListener {task ->
+                    if (task.isSuccessful){
+                        val intent = Intent(requireContext(), LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(requireContext(), "SignOut error", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
             }
             true
         }

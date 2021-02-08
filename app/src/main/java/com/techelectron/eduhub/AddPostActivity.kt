@@ -2,11 +2,12 @@ package com.techelectron.eduhub
 
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_add_post.*
@@ -48,6 +49,20 @@ class AddPostActivity : AppCompatActivity() {
         val allTopics = ArrayList<String>()
 
         getTopicList(allTopics)
+        val adapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.select_dialog_item, allTopics)
+        topicEt?.threshold = 1
+        topicEt?.setAdapter(adapter)
+
+        topicEt?.setOnItemClickListener { parent, view, position, id ->
+            val item = parent.getItemAtPosition(position).toString()
+            if (item == "Other"){
+                topicNameEt.visibility = View.VISIBLE
+            }else{
+                topicNameEt.visibility = View.GONE
+                selectedItem = item
+            }
+            //selectedItem = item
+        }
 
         postBtn?.setOnClickListener {
             val title = titleEt.text.toString().trim()
@@ -140,11 +155,11 @@ class AddPostActivity : AppCompatActivity() {
     private fun getUserDetails(){
         val userDb = FirebaseDatabase.getInstance().getReference("Users")
         val query = userDb.orderByChild("email").equalTo(userEmail)
-        query.addValueEventListener(object : ValueEventListener{
+        query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                for (ds in snapshot.children){
-                    userName = ""+ds.child("name").value
-                    userImage = ""+ds.child("profileImage").value
+                for (ds in snapshot.children) {
+                    userName = "" + ds.child("name").value
+                    userImage = "" + ds.child("profileImage").value
                 }
             }
 

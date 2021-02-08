@@ -66,7 +66,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    android:visibility="gone">
 
                     <com.skydoves.powerspinner.PowerSpinnerView
                         android:id="@+id/topicSpinner"
@@ -86,7 +87,9 @@
                         app:spinner_divider_size="0.4dp"
                         app:spinner_popup_animation="dropdown"
                         app:spinner_popup_background="@color/md_blue_grey_800"
-                        app:spinner_popup_elevation="14dp" />
+                        app:spinner_popup_elevation="14dp"
+                        android:visibility="gone"/>
+
 
                 </RelativeLayout>
 
@@ -95,7 +98,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="6dp">
-
+                    <AutoCompleteTextView
+                        android:id="@+id/topicEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_shape"
+                        android:padding="12dp"
+                        android:hint="Topic"/>
                     <EditText
                         android:id="@+id/topicNameEt"
                         android:layout_width="match_parent"
@@ -104,8 +113,9 @@
                         android:background="@drawable/edittext_shape"
                         android:hint="Topic Name"
                         android:padding="12dp"
-                        android:visibility="gone"
-                        android:layout_marginBottom="4dp"/>
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="4dp"
+                        android:visibility="gone"/>
 
                     <EditText
                         android:id="@+id/titleEt"
@@ -114,18 +124,19 @@
                         android:maxLength="150"
                         android:background="@drawable/edittext_shape"
                         android:hint="Title"
-                        android:padding="12dp"/>
+                        android:padding="12dp"
+                        android:layout_marginTop="8dp"/>
 
                     <EditText
                         android:id="@+id/descriptionEt"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Write something full of knowledge"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:background="@drawable/edittext_shape"
                         android:padding="12dp"
                         android:inputType="textMultiLine"
-                        android:layout_marginBottom="10dp"/>
+                        android:layout_marginBottom="10dp" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

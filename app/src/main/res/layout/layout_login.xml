@@ -11,11 +11,37 @@
     android:background="@color/whiteCardColor">
 
 
-
     <LinearLayout
+        android:id="@+id/gSignIn"
         style="@style/linearParent"
         android:layout_gravity="center"
+        android:gravity="center"
         android:padding="@dimen/loginViewsMargin">
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="Login"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/abeezee_italic"
+            android:gravity="center"
+            android:text="EduHub got a hustle free login for you." />
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nSignIn"
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin"
+        android:visibility="gone">
 
         <TextView
             style="@style/headerTextPrimary"
