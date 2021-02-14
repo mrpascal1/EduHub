@@ -86,7 +86,7 @@ class ProfileFragment : Fragment() {
                     cityTv?.text = city
                     if (profileIv != null) {
                         try {
-                            Glide.with(requireContext()).load(profileImage).into(profileIv)
+                            Glide.with(requireContext()).load(profileImage).placeholder(R.drawable.ic_user_dummy).into(profileIv)
                         }catch (e: Exception){
 
                         }

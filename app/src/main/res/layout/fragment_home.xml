@@ -15,11 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="EduHub"
-            android:fontFamily="@font/abeezee"
+            android:fontFamily="@font/helvetica"
             android:layout_centerVertical="true"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="24sp"/>
+            android:textSize="20sp"/>
         <ImageView
             android:id="@+id/searchIv"
             android:layout_width="wrap_content"
@@ -31,13 +30,14 @@
     </RelativeLayout>
 
     <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/titleLayout"
         android:background="@color/md_grey_300"/>
 
     <RelativeLayout
-        android:layout_below="@id/titleLayout"
+        android:layout_below="@id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText

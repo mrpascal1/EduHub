@@ -25,6 +25,11 @@ class UserProfileActivity : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.getReference("Users")
         val query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("uid").equalTo(uid)
+
+        backIv?.setOnClickListener {
+            onBackPressed()
+        }
+
         query.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -48,9 +53,8 @@ class UserProfileActivity : AppCompatActivity() {
                     cityTv?.text = city
                     if (profileIv != null) {
                         try {
-                            Glide.with(applicationContext).load(profileImage).into(profileIv)
+                            Glide.with(applicationContext).load(profileImage).placeholder(R.drawable.ic_user_dummy).into(profileIv)
                         }catch (e: Exception){
-
                         }
                     }
                     if (name == ""){

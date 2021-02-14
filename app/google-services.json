@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "686352265467-ogqvaqrtlm18eaf510qvvgnah1nb1dkk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techelectron.eduhub",
+            "certificate_hash": "8cb9f39ad3bfd2381ecb298de7e64e757671126f"
+          }
+        },
+        {
           "client_id": "686352265467-rpuhavmupdiu1prs1aruikp9orfogeg2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
