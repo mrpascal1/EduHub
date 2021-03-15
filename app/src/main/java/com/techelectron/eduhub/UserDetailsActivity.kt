@@ -3,6 +3,7 @@ package com.techelectron.eduhub
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
@@ -37,7 +38,12 @@ class UserDetailsActivity : AppCompatActivity() {
             progressDialog.show()
             val name = nameEt?.text.toString()
             val mobileNo = mobileNoEt?.text.toString()
-            firebaseAuthWithGoogle(account, name, mobileNo)
+            if (name == "" || mobileNo == "") {
+                errorTv?.visibility = View.VISIBLE
+            }else{
+                errorTv?.visibility = View.GONE
+                firebaseAuthWithGoogle(account, name, mobileNo)
+            }
         }
         titleTv?.setOnClickListener {
             onBackPressed()

@@ -2,9 +2,14 @@ package com.techelectron.eduhub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.techelectron.eduhub.adapters.AdapterMyPosts
+import com.techelectron.eduhub.models.ModelPost
 import kotlinx.android.synthetic.main.activity_user_profile.*
 import java.lang.Exception
 
@@ -13,23 +18,110 @@ class UserProfileActivity : AppCompatActivity() {
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var firebaseDatabase: FirebaseDatabase
     lateinit var databaseReference: DatabaseReference
+    var userId = ""
+    lateinit var postList: ArrayList<ModelPost>
+    lateinit var adapterMyPosts: AdapterMyPosts
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
 
         val uid = intent.getStringExtra("userUid").toString()
-
+        userId = uid
         firebaseAuth = FirebaseAuth.getInstance()
         val user = FirebaseAuth.getInstance().currentUser
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.getReference("Users")
-        val query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("uid").equalTo(uid)
+
+        postList = ArrayList()
+        adapterMyPosts = AdapterMyPosts(postList, this)
+        val llayoutManager = LinearLayoutManager(this)
+        llayoutManager.stackFromEnd = true
+        llayoutManager.reverseLayout = true
+//        llayoutManager.orientation = RecyclerView.VERTICAL
+        recyclerView?.isNestedScrollingEnabled = false
+        recyclerView?.layoutManager = llayoutManager
+        recyclerView?.adapter = adapterMyPosts
+
+        getUserInfo()
+        showDefault()
+        getUserPost()
+        getNoOfPosts()
+
+        userInfoBtn?.setOnClickListener {
+            if (userInfo.visibility == View.GONE){
+                userInfoBtn.setTextColor(resources.getColor(R.color.blue))
+                postBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+                postCard.visibility = View.GONE
+                userInfo.visibility = View.VISIBLE
+            }
+        }
+
+        postBtn?.setOnClickListener {
+            if (postCard.visibility == View.GONE){
+                postBtn.setTextColor(resources.getColor(R.color.blue))
+                userInfoBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+                userInfo.visibility = View.GONE
+                postCard.visibility = View.VISIBLE
+            }
+        }
 
         backIv?.setOnClickListener {
             onBackPressed()
         }
 
+    }
+
+    private fun showDefault(){
+        userInfoBtn.setTextColor(resources.getColor(R.color.blue))
+        postBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+        postCard.visibility = View.GONE
+        userInfo.visibility = View.VISIBLE
+    }
+
+    private fun getNoOfPosts(){
+        val reference = FirebaseDatabase.getInstance().getReference("Posts")
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var i = 0
+                for (ds in snapshot.children){
+                    val post = ds.getValue(ModelPost::class.java)
+                    if (post != null && post.uid == userId){
+                        i++
+                    }
+                }
+                postCountTv?.text = "" + i
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
+    }
+
+    private fun getUserPost(){
+        val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        val query = ref.orderByChild("uid").equalTo(userId)
+        query.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                postList.clear()
+                for (ds in snapshot.children){
+                    val myPosts = ds.getValue(ModelPost::class.java)
+                    if (myPosts != null) {
+                        Log.d("TAG", myPosts.toString())
+                        postList.add(myPosts)
+                    }
+                }
+                adapterMyPosts.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+
+        })
+    }
+
+    private fun getUserInfo(){
+        val query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("uid").equalTo(userId)
         query.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -84,5 +176,6 @@ class UserProfileActivity : AppCompatActivity() {
 
             }
         })
+
     }
 }

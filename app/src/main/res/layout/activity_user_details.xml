@@ -33,6 +33,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp">
+                <TextView
+                    android:id="@+id/errorTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All fields are mandatory."
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"/>
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"

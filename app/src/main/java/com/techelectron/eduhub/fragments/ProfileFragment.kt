@@ -2,10 +2,12 @@ package com.techelectron.eduhub.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -15,6 +17,8 @@ import com.google.firebase.database.*
 import com.techelectron.eduhub.EditProfileActivity
 import com.techelectron.eduhub.LoginActivity
 import com.techelectron.eduhub.R
+import com.techelectron.eduhub.adapters.AdapterMyPosts
+import com.techelectron.eduhub.models.ModelPost
 import kotlinx.android.synthetic.main.fragment_profile.*
 import java.lang.Exception
 
@@ -26,6 +30,8 @@ class ProfileFragment : Fragment() {
     lateinit var query: Query
     lateinit var uid: String
     private var googleSignInClient: GoogleSignInClient? = null
+    lateinit var postList: ArrayList<ModelPost>
+    lateinit var adapterMyPosts: AdapterMyPosts
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -54,12 +60,92 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        postList = ArrayList()
+        adapterMyPosts = AdapterMyPosts(postList, requireContext())
+        val llayoutManager = LinearLayoutManager(requireContext())
+        llayoutManager.stackFromEnd = true
+        llayoutManager.reverseLayout = true
+//        llayoutManager.orientation = RecyclerView.VERTICAL
+        recyclerView?.isNestedScrollingEnabled = false
+        recyclerView?.layoutManager = llayoutManager
+        recyclerView?.adapter = adapterMyPosts
+
         moreBtn.setOnClickListener {
             showPopup()
         }
 
-        getUserData()
+        showDefault()
 
+        userInfoBtn?.setOnClickListener {
+            if (userInfo.visibility == View.GONE){
+                userInfoBtn.setTextColor(resources.getColor(R.color.blue))
+                postBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+                postCard.visibility = View.GONE
+                userInfo.visibility = View.VISIBLE
+            }
+        }
+
+        postBtn?.setOnClickListener {
+            if (postCard.visibility == View.GONE){
+                postBtn.setTextColor(resources.getColor(R.color.blue))
+                userInfoBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+                userInfo.visibility = View.GONE
+                postCard.visibility = View.VISIBLE
+            }
+        }
+        getUserData()
+        getUserPost()
+        getNoOfPosts()
+    }
+
+    private fun showDefault(){
+        userInfoBtn.setTextColor(resources.getColor(R.color.blue))
+        postBtn.setTextColor(resources.getColor(R.color.md_grey_500))
+        postCard.visibility = View.GONE
+        userInfo.visibility = View.VISIBLE
+    }
+
+    private fun getUserPost(){
+        val ref = FirebaseDatabase.getInstance().getReference("Posts")
+        val query = ref.orderByChild("uid").equalTo(uid)
+        query.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                postList.clear()
+                for (ds in snapshot.children){
+                    val myPosts = ds.getValue(ModelPost::class.java)
+                    if (myPosts != null) {
+                        Log.d("TAG", myPosts.toString())
+                        postList.add(myPosts)
+                    }
+                }
+                adapterMyPosts.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+
+        })
+    }
+
+    private fun getNoOfPosts(){
+        val reference = FirebaseDatabase.getInstance().getReference("Posts")
+        reference.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var i = 0
+                for (ds in snapshot.children){
+                    val post = ds.getValue(ModelPost::class.java)
+                    if (post != null && post.uid == uid){
+                        i++
+                    }
+                }
+                postCountTv.text = ""+i
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
     }
 
     private fun getUserData(){

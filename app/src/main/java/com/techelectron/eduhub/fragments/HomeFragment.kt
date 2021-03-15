@@ -1,5 +1,6 @@
 package com.techelectron.eduhub.fragments
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -30,6 +31,7 @@ class HomeFragment : Fragment() {
     lateinit var userEmail: String
     lateinit var postList: ArrayList<ModelPost>
     lateinit var adapterPosts: AdapterPosts
+    lateinit var progressDialog: ProgressDialog
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -38,6 +40,18 @@ class HomeFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.getReference("Posts")
+        progressDialog = ProgressDialog(requireContext())
+        progressDialog.setTitle("EduHub")
+        progressDialog.setMessage("Loading Posts...")
+        progressDialog.setCancelable(false)
+        progressDialog.setCanceledOnTouchOutside(false)
+
+        progressDialog = ProgressDialog(requireContext())
+        progressDialog.setTitle("EduHub")
+        progressDialog.setMessage("Loading Posts...")
+        progressDialog.setCancelable(false)
+        progressDialog.setCanceledOnTouchOutside(false)
+
         checkLogin()
         return view
     }
@@ -46,10 +60,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         postList = ArrayList()
         adapterPosts = AdapterPosts(postList, requireContext())
-        val layoutManager = LinearLayoutManager(requireContext())
-        layoutManager.reverseLayout = true
-        layoutManager.stackFromEnd = true
-        recyclerView?.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+        val llayoutManager = LinearLayoutManager(requireContext())
+        llayoutManager.stackFromEnd = true
+        llayoutManager.reverseLayout = true
+//        llayoutManager.orientation = RecyclerView.VERTICAL
+        recyclerView?.layoutManager = llayoutManager
+        //recyclerView?.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
         recyclerView?.adapter = adapterPosts
 
         searchIv?.setOnClickListener {
@@ -79,8 +95,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun getPosts(postList: ArrayList<ModelPost>, adapterPosts: AdapterPosts){
+        progressDialog.show()
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                progressDialog.dismiss()
                 postList.clear()
                 for (ds in snapshot.children){
                     val post = ds.getValue(ModelPost::class.java)
@@ -92,6 +110,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
+                progressDialog.dismiss()
             }
 
         })

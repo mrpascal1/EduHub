@@ -86,10 +86,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp">
+
+
 
             <!--Top Profile Section -->
             <LinearLayout
@@ -125,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/proximanovaregular"
-                        android:text=""
+                        android:text="Shahid Raza"
                         android:layout_gravity="center"
                         android:textColor="#424242"
                         android:textSize="21sp"
@@ -136,7 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/proximanovaregular"
-                        android:text=""
+                        android:text="Android Developer"
                         android:layout_gravity="center"
                         android:textSize="14sp" />
 
@@ -149,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:paddingBottom="10dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -172,10 +179,10 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/postsTv"
+                                android:id="@+id/postCountTv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=""
+                                android:text="500+"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -193,7 +200,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:padding="8dp">
+                        android:padding="8dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="35dp"
@@ -209,10 +217,10 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/starsTv"
+                                android:id="@+id/iqTv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=""
+                                android:text="500+"
                                 android:maxEms="2"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -221,7 +229,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Stars"
+                                android:text="IQ"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -241,7 +249,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/personalinfobtn"
+                    android:id="@+id/userInfoBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -257,22 +265,21 @@
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/lightgrey"
-                    android:visibility="gone"/>
+                    android:background="@color/lightgrey"/>
 
-                <!--<TextView
-                    android:id="@+id/experiencebtn"
+                <TextView
+                    android:id="@+id/postBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:fontFamily="@font/proximanovaregular"
                     android:gravity="center"
                     android:padding="13dp"
-                    android:text="Experience"
+                    android:text="Posts"
                     android:textAllCaps="true"
-                    android:textColor="@color/lightgrey"
+                    android:textColor="@color/md_grey_500"
                     android:textSize="14sp"
-                    android:textStyle="bold" />-->
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="1dp"
@@ -295,13 +302,16 @@
                     android:textStyle="bold" />-->
 
             </LinearLayout>
+            </LinearLayout>
 
             <!--Bootom Cards with sections-->
             <LinearLayout
-                android:id="@+id/personalinfo"
+                android:id="@+id/userInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
                 <!--About Me Card-->
                 <LinearLayout
@@ -586,12 +596,19 @@
             </LinearLayout>
 
             <!--Experience Bottom Cards-->
-            <LinearLayout
-                android:id="@+id/experience"
+            <RelativeLayout
+                android:id="@+id/postCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:descendantFocusability="blocksDescendants"
+                android:visibility="gone">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <!--<LinearLayout
                     android:layout_width="match_parent"
@@ -793,7 +810,7 @@
 
                 </LinearLayout>-->
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <!--Review Bottom Cards-->
             <LinearLayout

@@ -8,6 +8,9 @@
     android:orientation="vertical"
     tools:context=".fragments.ProfileFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="240dp"
@@ -84,11 +87,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp">
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
             <!--Top Profile Section -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -109,7 +116,8 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:scaleType="centerCrop"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_user_dummy"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -123,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/proximanovaregular"
-                        android:text=""
+                        android:text="Shahid"
                         android:layout_gravity="center"
                         android:textColor="#424242"
                         android:textSize="21sp"
@@ -134,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/proximanovaregular"
-                        android:text=""
+                        android:text="Android Developer"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textSize="14sp" />
@@ -148,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:paddingBottom="10dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -171,10 +179,10 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/postsTv"
+                                android:id="@+id/postCountTv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=""
+                                android:text="500+"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
 
@@ -192,7 +200,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:gravity="center"
-                        android:padding="8dp">
+                        android:padding="8dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="35dp"
@@ -208,10 +217,10 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/starsTv"
+                                android:id="@+id/iqTv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=""
+                                android:text="500+"
                                 android:maxEms="2"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -220,7 +229,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
-                                android:text="Stars"
+                                android:text="IQ"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -240,7 +249,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/personalinfobtn"
+                    android:id="@+id/userInfoBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -256,11 +265,10 @@
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/lightgrey"
-                    android:visibility="gone"/>
+                    android:background="@color/lightgrey"/>
 
                 <TextView
-                    android:id="@+id/experiencebtn"
+                    android:id="@+id/postBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -269,10 +277,9 @@
                     android:padding="13dp"
                     android:text="Posts"
                     android:textAllCaps="true"
-                    android:textColor="@color/lightgrey"
+                    android:textColor="@color/md_grey_500"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:visibility="gone"/>
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="1dp"
@@ -295,13 +302,17 @@
                     android:textStyle="bold" />-->
 
             </LinearLayout>
+            </LinearLayout>
 
             <!--Bootom Cards with sections-->
             <LinearLayout
-                android:id="@+id/personalinfo"
+                android:id="@+id/userInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone">
 
                 <!--About Me Card-->
                 <LinearLayout
@@ -585,12 +596,18 @@
             </LinearLayout>
 
             <!--Experience Bottom Cards-->
-            <LinearLayout
-                android:id="@+id/experience"
+            <RelativeLayout
+                android:id="@+id/postCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:descendantFocusability="blocksDescendants">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <!--<LinearLayout
                     android:layout_width="match_parent"
@@ -792,7 +809,7 @@
 
                 </LinearLayout>-->
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <!--Review Bottom Cards-->
             <LinearLayout
@@ -971,6 +988,6 @@
 
 
     </ScrollView>
-
+    </RelativeLayout>
 
 </RelativeLayout>
